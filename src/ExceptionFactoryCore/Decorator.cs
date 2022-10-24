@@ -60,4 +60,17 @@ public static class Decorator
         var newMetadata = decoratorMetadata.Metadata.Concat(new []{addition}).ToArray();
         return decoratorMetadata with { Metadata = newMetadata };
     }
+    
+    public static DecoratorMetadata<T> WithFactsFactory<T>(
+        this DecoratorMetadata<T> decoratorMetadata, 
+        Func<dynamic> factsFactory
+    )
+        where T: Exception
+    {
+        var facts = factsFactory.Invoke();
+        var factsText = System.Text.Json.JsonSerializer.Serialize(facts);
+        var addition = $" With facts: {factsText}";
+        var newMetadata = decoratorMetadata.Metadata.Concat(new []{addition}).ToArray();
+        return decoratorMetadata with { Metadata = newMetadata };
+    }
 }
