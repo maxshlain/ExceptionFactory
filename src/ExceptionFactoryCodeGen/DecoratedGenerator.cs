@@ -1,4 +1,5 @@
 ﻿using System.Collections.Immutable;
+using System.Diagnostics.CodeAnalysis;
 using System.Text;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp.Syntax;
@@ -9,7 +10,7 @@ using Microsoft.CodeAnalysis.Text;
 namespace ExceptionFactoryCodeGen
 {
     [Generator]
-    public partial class DecoratedGenerator : IIncrementalGenerator
+    public class DecoratedGenerator : IIncrementalGenerator
     {
         public void Initialize(IncrementalGeneratorInitializationContext context)
         {
@@ -25,16 +26,18 @@ namespace ExceptionFactoryCodeGen
             context.RegisterSourceOutput(compilationAndClasses, static (spc, source) => Execute(source.Item1, source.Item2, spc));
         }
 
-        internal static ClassDeclarationSyntax? GetSemanticTargetForGeneration(GeneratorSyntaxContext context)
+        [SuppressMessage("ReSharper", "UnusedParameter.Local")]
+        private static ClassDeclarationSyntax? GetSemanticTargetForGeneration(GeneratorSyntaxContext context)
         {
             return null;
         }
 
-        private bool Predicate(SyntaxNode arg1, CancellationToken arg2)
+        private bool Predicate(SyntaxNode syntaxNode, CancellationToken cancellationToken)
         {
             return true;
         }
 
+        [SuppressMessage("ReSharper", "UnusedParameter.Local")]
         private static void Execute(
             Compilation compilation, 
             ImmutableArray<ClassDeclarationSyntax?> classes, 
