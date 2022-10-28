@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ExceptionFactoryCodeGen": {
+      "commandName": "DebugRoslynComponent",
+      "targetProject": "..\\..\\ExceptionFactoryCodeGen.csproj"
+    }
+  }
+}

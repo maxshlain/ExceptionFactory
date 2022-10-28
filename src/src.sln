@@ -3,13 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExceptionFactoryCore", "ExceptionFactoryCore", "{DBA6FD1F-596B-4F1F-974F-A6B7B6035B8D}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryCore", "ExceptionFactoryCore\ExceptionFactoryCore.csproj", "{DF2902DE-04C7-43A2-9B0A-6B3A903565CC}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ExceptionFactoryTests", "ExceptionFactoryTests", "{82925401-CF99-477E-AF8E-D551AEDB495B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryTests", "ExceptionFactoryTests\ExceptionFactoryTests.csproj", "{769C58E3-B8AF-4E43-A96A-517B9009F066}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExceptionFactoryCodeGen", "ExceptionFactoryCodeGen\ExceptionFactoryCodeGen.csproj", "{BE39726C-9ECB-460E-B705-B5BD8CF5E151}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -28,9 +26,11 @@ Global
 		{769C58E3-B8AF-4E43-A96A-517B9009F066}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{769C58E3-B8AF-4E43-A96A-517B9009F066}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{769C58E3-B8AF-4E43-A96A-517B9009F066}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE39726C-9ECB-460E-B705-B5BD8CF5E151}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE39726C-9ECB-460E-B705-B5BD8CF5E151}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE39726C-9ECB-460E-B705-B5BD8CF5E151}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE39726C-9ECB-460E-B705-B5BD8CF5E151}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{DF2902DE-04C7-43A2-9B0A-6B3A903565CC} = {DBA6FD1F-596B-4F1F-974F-A6B7B6035B8D}
-		{769C58E3-B8AF-4E43-A96A-517B9009F066} = {82925401-CF99-477E-AF8E-D551AEDB495B}
 	EndGlobalSection
 EndGlobal
