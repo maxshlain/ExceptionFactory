@@ -32,4 +32,12 @@
     <ProjectReference Include="..\ExceptionFactoryCore\ExceptionFactoryCore.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference
+            Include="..\ExceptionFactoryCodeGen\ExceptionFactoryCodeGen.csproj"
+            PrivateAssets="all"
+            ReferenceOutputAssembly="false" OutputItemType="Analyzer"
+    />
+  </ItemGroup>
+
 </Project>
